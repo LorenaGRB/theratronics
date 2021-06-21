@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Megrim&display=swap');
+@keyframes escribir {
+    from { width: 100% }
+    to { width:0 }
+}
+
+
+body{
+    background-color: #212529;
+}
+.navbar{
+    overflow: hidden;
+    &-brand{
+        width: 30%;
+    }
+}
+.inicio{
+    display: flex;
+    align-items: center;
+    justify-content: center !important;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    margin: 0px;
+    &__logo{
+        min-width: 300px;
+        width: 90%;
+        display: block;
+        margin: 0px auto 100px;
+        font-family: 'Megrim', cursive;
+    }
+    &__text{
+        display: table;
+        h2 { 
+        position: relative; 
+        float: left;
+        background-color: #212529;
+        color: #fff;
+        font-family: 'Major Mono Display', monospace;
+        font-size: 100%;
+        max-width: 700px;
+        }
+        h2 span {
+            position:absolute;
+            right:0;
+            width:0;
+            border-left: 1px solid rgb(255, 255, 255);
+            background: #212529;
+            animation: escribir 5s steps(30) 1 alternate;
+        }
+    }
+}
+
+
+
+
+
+.content {
+    padding: 16px;
+    color: white;
+
+  }
+  
+  /* The sticky class is added to the navbar with JS when it reaches its scroll position */
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  
+  /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+  .sticky + .content {
+    padding-top: 60px;
+  }
